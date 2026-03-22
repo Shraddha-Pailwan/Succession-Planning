@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:role_name",
+ "creation": "2026-03-22 22:26:15.086773",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "role_name",
+  "role_criticality",
+  "incumbent_employee",
+  "retirement_or_vacancy_date",
+  "regulatory_scope",
+  "column_break_ubqj",
+  "department",
+  "minimum_bench_strength",
+  "last_reviewed_on",
+  "status",
+  "competency_requirements_section",
+  "competency_requirements"
+ ],
+ "fields": [
+  {
+   "fieldname": "role_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Role Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "role_criticality",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Role Criticality",
+   "options": "KMP\nSenior Management\nCritical Operational",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "regulatory_scope",
+   "fieldtype": "Check",
+   "label": "Regulatory Scope"
+  },
+  {
+   "fieldname": "minimum_bench_strength",
+   "fieldtype": "Int",
+   "label": "Minimum Bench Strength",
+   "reqd": 1
+  },
+  {
+   "fieldname": "incumbent_employee",
+   "fieldtype": "Link",
+   "label": "Incumbent Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "retirement_or_vacancy_date",
+   "fieldtype": "Date",
+   "label": "Retirement or Vacancy Date"
+  },
+  {
+   "fieldname": "competency_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Competency Requirements"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Active\nUnder Review\nFilled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_reviewed_on",
+   "fieldtype": "Date",
+   "label": "Last Reviewed On"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "column_break_ubqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "competency_requirements_section",
+   "fieldtype": "Section Break",
+   "label": "Competency Requirements"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-23 00:55:45.144786",
+ "modified_by": "Administrator",
+ "module": "Succession Planning",
+ "name": "Critical Role Register",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:action_title",
+ "creation": "2026-03-23 00:42:08.596292",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_section",
+  "action_title",
+  "training_event",
+  "target_date",
+  "responsible",
+  "column_break_lcdv",
+  "development_type",
+  "status",
+  "completion_date",
+  "section_break_aiqa",
+  "evidence_remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "action_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "training_event",
+   "fieldtype": "Link",
+   "label": "Training Event",
+   "options": "Training Event"
+  },
+  {
+   "fieldname": "target_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Target Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_lcdv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "development_type",
+   "fieldtype": "Select",
+   "label": "Development Type",
+   "options": "Training\ncertification\nOn-The-Job\nMentoring\nCross-Posting"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Planned\nIn Progress\nCompleted\nOverdue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "section_break_aiqa",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "evidence_remarks",
+   "fieldtype": "Small Text",
+   "label": "Evidence Remarks"
+  },
+  {
+   "fieldname": "basic_section",
+   "fieldtype": "Section Break",
+   "label": "Basic"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-03-23 00:47:01.696817",
+ "modified_by": "Administrator",
+ "module": "Succession Planning",
+ "name": "IDP Action Item",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

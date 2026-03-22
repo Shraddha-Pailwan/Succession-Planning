@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-22 22:51:34.982699",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "nominee_employee",
+  "department",
+  "readiness_level",
+  "potential_rating",
+  "idp_reference",
+  "column_break_lhun",
+  "employee_name",
+  "designation",
+  "nine_box_position",
+  "last_appraisal_score",
+  "idp_created",
+  "section_break_iwuj",
+  "key_strengths",
+  "column_break_jjkj",
+  "development_gaps"
+ ],
+ "fields": [
+  {
+   "fieldname": "nominee_employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nominee Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nominee_employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "nominee_employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "readiness_level",
+   "fieldtype": "Select",
+   "label": "Readiness Level",
+   "options": "Ready Now\n1 Year\n2+ Years",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_appraisal_score",
+   "fieldtype": "Float",
+   "label": "Last Appraisal Score",
+   "precision": "2"
+  },
+  {
+   "fieldname": "potential_rating",
+   "fieldtype": "Select",
+   "label": "Potential Rating",
+   "options": "High\nMedium\nLow"
+  },
+  {
+   "fieldname": "nine_box_position",
+   "fieldtype": "Select",
+   "label": "Nine Box Position",
+   "options": "1A\n1B\n1C\n2A\n2B\n2C\n3A\n3B\n3C"
+  },
+  {
+   "default": "0",
+   "fieldname": "idp_created",
+   "fieldtype": "Check",
+   "label": "IDP Created"
+  },
+  {
+   "fieldname": "column_break_lhun",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_iwuj",
+   "fieldtype": "Section Break",
+   "label": "Strengths and Development Gaps"
+  },
+  {
+   "fieldname": "key_strengths",
+   "fieldtype": "Small Text",
+   "label": "Key Strengths"
+  },
+  {
+   "fieldname": "development_gaps",
+   "fieldtype": "Small Text",
+   "label": "Development Gaps"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "column_break_jjkj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "nominee_employee.department",
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
+  },
+  {
+   "fieldname": "idp_reference",
+   "fieldtype": "Link",
+   "label": "IDP Reference",
+   "options": "Individual Development Plan"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-03-23 00:52:31.156180",
+ "modified_by": "Administrator",
+ "module": "Succession Planning",
+ "name": "Succession Nominee",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

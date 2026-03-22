@@ -1,0 +1,174 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:IDP-EMP-YYYY-##",
+ "creation": "2026-03-22 23:06:20.000191",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_l8ic",
+  "employee",
+  "target_role",
+  "succession_plan",
+  "traget_readiness",
+  "idp_status",
+  "column_break_oryb",
+  "employee_name",
+  "idp_period_start",
+  "idp_period_end",
+  "readiness_at_start",
+  "overall_competition",
+  "section_break_zzry",
+  "action_items",
+  "section_break_zxag",
+  "manager_remarks",
+  "column_break_lnlp",
+  "hr_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_l8ic",
+   "fieldtype": "Section Break",
+   "label": "Basic"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "target_role",
+   "fieldtype": "Link",
+   "label": "Target Role",
+   "options": "Critical Role Register",
+   "reqd": 1
+  },
+  {
+   "fieldname": "succession_plan",
+   "fieldtype": "Link",
+   "label": "Succession Plan",
+   "options": "Succession Plan"
+  },
+  {
+   "fieldname": "column_break_oryb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "readiness_at_start",
+   "fieldtype": "Select",
+   "label": "Readiness At Start",
+   "options": "Ready Now\n1 Year\n2+ Years",
+   "reqd": 1
+  },
+  {
+   "fieldname": "overall_competition",
+   "fieldtype": "Percent",
+   "label": "Overall Competition %"
+  },
+  {
+   "fieldname": "idp_status",
+   "fieldtype": "Select",
+   "label": "IDP Status",
+   "options": "Draft\nIn Progress\nCompleted\nOn Hold"
+  },
+  {
+   "fieldname": "section_break_zxag",
+   "fieldtype": "Section Break",
+   "label": "Remarks & Notes"
+  },
+  {
+   "fieldname": "manager_remarks",
+   "fieldtype": "Text Editor",
+   "label": "Manager Remarks"
+  },
+  {
+   "fieldname": "column_break_lnlp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hr_notes",
+   "fieldtype": "Text Editor",
+   "label": "HR Notes"
+  },
+  {
+   "fieldname": "idp_period_start",
+   "fieldtype": "Date",
+   "label": "IDP Period Start",
+   "reqd": 1
+  },
+  {
+   "fieldname": "traget_readiness",
+   "fieldtype": "Select",
+   "label": "Target Readiness",
+   "options": "End Date of IDP",
+   "reqd": 1
+  },
+  {
+   "fieldname": "idp_period_end",
+   "fieldtype": "Date",
+   "label": "IDP Period End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_zzry",
+   "fieldtype": "Section Break",
+   "label": "Individual Development Plan Action Items"
+  },
+  {
+   "fieldname": "action_items",
+   "fieldtype": "Table",
+   "label": "Action Items",
+   "options": "IDP Action Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Individual Development Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-23 00:51:04.558890",
+ "modified_by": "Administrator",
+ "module": "Succession Planning",
+ "name": "Individual Development Plan",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
