@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:IDP-EMP-YYYY-##",
+ "autoname": "format:IDP-EMP-{YYYY}-{##}",
  "creation": "2026-03-22 23:06:20.000191",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -79,7 +79,8 @@
    "fieldname": "idp_status",
    "fieldtype": "Select",
    "label": "IDP Status",
-   "options": "Draft\nIn Progress\nCompleted\nOn Hold"
+   "options": "Draft\nIn Progress\nCompleted\nOn Hold",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_zxag",
@@ -110,7 +111,7 @@
    "fieldname": "traget_readiness",
    "fieldtype": "Select",
    "label": "Target Readiness",
-   "options": "End Date of IDP",
+   "options": "Ready Now\n1 Year\n2+ Years",
    "reqd": 1
   },
   {
@@ -145,7 +146,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-23 00:51:04.558890",
+ "modified": "2026-03-23 12:18:43.779239",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Individual Development Plan",

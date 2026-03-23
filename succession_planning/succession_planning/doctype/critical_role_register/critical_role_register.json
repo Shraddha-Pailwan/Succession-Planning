@@ -16,6 +16,7 @@
   "department",
   "minimum_bench_strength",
   "last_reviewed_on",
+  "job_profile",
   "status",
   "competency_requirements_section",
   "competency_requirements"
@@ -98,12 +99,23 @@
    "fieldname": "competency_requirements_section",
    "fieldtype": "Section Break",
    "label": "Competency Requirements"
+  },
+  {
+   "fieldname": "job_profile",
+   "fieldtype": "Link",
+   "label": "Job Profile",
+   "options": "Job Opening"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-03-23 00:55:45.144786",
+ "links": [
+  {
+   "link_doctype": "Succession Plan",
+   "link_fieldname": "critical_role"
+  }
+ ],
+ "modified": "2026-03-23 12:11:51.129473",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Critical Role Register",

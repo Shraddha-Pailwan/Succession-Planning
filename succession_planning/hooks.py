@@ -247,11 +247,42 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
-
 fixtures = [
+
+    # ---------------- WORKSPACE ---------------- #
     {
         "dt": "Workspace",
         "filters": [["module", "=", "Succession Planning"]]
+    },
+
+    # ---------------- REPORTS ---------------- #
+    {
+        "dt": "Report",
+        "filters": [["module", "=", "Succession Planning"]]
+    },
+
+    # ---------------- NUMBER CARDS ---------------- #
+    {
+        "dt": "Number Card",
+        "filters": [
+            ["name", "in", [
+                "Total Critical Roles",
+                "Roles At Risk",
+                "Total IDPs",
+                "Completed IDPs"
+            ]]
+        ]
+    },
+
+    # ---------------- DASHBOARD CHARTS ---------------- #
+    {
+        "dt": "Dashboard Chart",
+        "filters": [
+            ["name", "in", [
+                "Bench Status Distribution"
+            ]]
+        ]
     }
+
 ]
 

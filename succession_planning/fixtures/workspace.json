@@ -1,7 +1,15 @@
 [
  {
-  "charts": [],
-  "content": "[{\"id\":\"UTV4FaAxwN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Succession Planning</span>\",\"col\":12}},{\"id\":\"o-g8E2IGJ-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mZ8YMoSm-s\",\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"id\":\"h_k9JqKTxM\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}}]",
+  "charts": [
+   {
+    "chart_name": "Bench Status Distribution",
+    "label": "Bench Status Distribution",
+    "parent": "Succession Planning",
+    "parentfield": "charts",
+    "parenttype": "Workspace"
+   }
+  ],
+  "content": "[{\"id\":\"UTV4FaAxwN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Succession Planning</span>\",\"col\":12}},{\"id\":\"o-g8E2IGJ-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mZ8YMoSm-s\",\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"id\":\"h_k9JqKTxM\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"5mUzCJ9lto\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"k2tCePs31V\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cruYzcHRR6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Critical Roles\",\"col\":3}},{\"id\":\"oZE21DEZOV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed IDPs\",\"col\":3}},{\"id\":\"qLo42tlGMa\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total IDPs\",\"col\":3}},{\"id\":\"izeV7W5LZ5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Roles At Risk\",\"col\":3}},{\"id\":\"5YBG7grcst\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"br-32pWJwn\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Bench Status Distribution\",\"col\":12}}]",
   "custom_blocks": [],
   "docstatus": 0,
   "doctype": "Workspace",
@@ -101,12 +109,113 @@
     "parenttype": "Workspace",
     "report_ref_doctype": null,
     "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Reports",
+    "link_count": 3,
+    "link_to": null,
+    "link_type": "DocType",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "Succession Planning",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Card Break"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 1,
+    "label": "Action Item Tracker",
+    "link_count": 0,
+    "link_to": "Action Item Tracker",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "Succession Planning",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": null,
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "Succession Risk Report",
+    "link_count": 0,
+    "link_to": "Succession Risk Report",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "Succession Planning",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": "Succession Plan",
+    "type": "Link"
+   },
+   {
+    "dependencies": null,
+    "description": null,
+    "hidden": 0,
+    "icon": null,
+    "is_query_report": 0,
+    "label": "IDP Progress Report",
+    "link_count": 0,
+    "link_to": "IDP Progress Report",
+    "link_type": "Report",
+    "onboard": 0,
+    "only_for": null,
+    "parent": "Succession Planning",
+    "parentfield": "links",
+    "parenttype": "Workspace",
+    "report_ref_doctype": "Individual Development Plan",
+    "type": "Link"
    }
   ],
-  "modified": "2026-03-23 01:21:32.689548",
+  "modified": "2026-03-23 13:57:21.493875",
   "module": "Succession Planning",
   "name": "Succession Planning",
-  "number_cards": [],
+  "number_cards": [
+   {
+    "label": "Total Critical Roles",
+    "number_card_name": "Total Critical Roles",
+    "parent": "Succession Planning",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Completed IDPs",
+    "number_card_name": "Completed IDPs",
+    "parent": "Succession Planning",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Total IDPs",
+    "number_card_name": "Total IDPs",
+    "parent": "Succession Planning",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   },
+   {
+    "label": "Roles At Risk",
+    "number_card_name": "Roles At Risk",
+    "parent": "Succession Planning",
+    "parentfield": "number_cards",
+    "parenttype": "Workspace"
+   }
+  ],
   "parent_page": "",
   "public": 1,
   "quick_lists": [],

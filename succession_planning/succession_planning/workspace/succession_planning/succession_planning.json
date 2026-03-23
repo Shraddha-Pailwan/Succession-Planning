@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"id\":\"UTV4FaAxwN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Succession Planning</span>\",\"col\":12}},{\"id\":\"o-g8E2IGJ-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mZ8YMoSm-s\",\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"id\":\"h_k9JqKTxM\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}}]",
+ "charts": [
+  {
+   "chart_name": "Bench Status Distribution",
+   "label": "Bench Status Distribution"
+  }
+ ],
+ "content": "[{\"id\":\"UTV4FaAxwN\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Succession Planning</span>\",\"col\":12}},{\"id\":\"o-g8E2IGJ-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mZ8YMoSm-s\",\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"id\":\"h_k9JqKTxM\",\"type\":\"card\",\"data\":{\"card_name\":\"Operations\",\"col\":4}},{\"id\":\"5mUzCJ9lto\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"k2tCePs31V\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"cruYzcHRR6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Critical Roles\",\"col\":3}},{\"id\":\"oZE21DEZOV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed IDPs\",\"col\":3}},{\"id\":\"qLo42tlGMa\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total IDPs\",\"col\":3}},{\"id\":\"izeV7W5LZ5\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Roles At Risk\",\"col\":3}},{\"id\":\"5YBG7grcst\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"br-32pWJwn\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Bench Status Distribution\",\"col\":12}}]",
  "creation": "2026-03-23 01:00:59.189115",
  "custom_blocks": [],
  "docstatus": 0,
@@ -60,13 +65,71 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Action Item Tracker",
+   "link_count": 0,
+   "link_to": "Action Item Tracker",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Succession Risk Report",
+   "link_count": 0,
+   "link_to": "Succession Risk Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Succession Plan",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "IDP Progress Report",
+   "link_count": 0,
+   "link_to": "IDP Progress Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Individual Development Plan",
+   "type": "Link"
   }
  ],
- "modified": "2026-03-23 01:21:32.689548",
+ "modified": "2026-03-23 13:57:21.493875",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Succession Planning",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Total Critical Roles",
+   "number_card_name": "Total Critical Roles"
+  },
+  {
+   "label": "Completed IDPs",
+   "number_card_name": "Completed IDPs"
+  },
+  {
+   "label": "Total IDPs",
+   "number_card_name": "Total IDPs"
+  },
+  {
+   "label": "Roles At Risk",
+   "number_card_name": "Roles At Risk"
+  }
+ ],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,

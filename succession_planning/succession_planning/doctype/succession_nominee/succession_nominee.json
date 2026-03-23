@@ -71,10 +71,12 @@
    "options": "1A\n1B\n1C\n2A\n2B\n2C\n3A\n3B\n3C"
   },
   {
+   "allow_on_submit": 1,
    "default": "0",
    "fieldname": "idp_created",
    "fieldtype": "Check",
-   "label": "IDP Created"
+   "label": "IDP Created",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_lhun",
@@ -112,17 +114,19 @@
    "options": "Department"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "idp_reference",
    "fieldtype": "Link",
    "label": "IDP Reference",
-   "options": "Individual Development Plan"
+   "options": "Individual Development Plan",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-03-23 00:52:31.156180",
+ "modified": "2026-03-23 11:20:13.190945",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Succession Nominee",

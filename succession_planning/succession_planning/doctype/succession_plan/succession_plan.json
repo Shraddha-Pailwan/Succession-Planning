@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:SP-.YYYY.-.######",
+ "autoname": "format:SP-{YYYY}-{#####}",
  "creation": "2026-03-22 22:43:56.882266",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -67,7 +67,7 @@
    "fieldtype": "Select",
    "label": "Overall Bench Status",
    "options": "Adequate\nAt Risk\nCritical Gap",
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "column_break_bovu",
@@ -89,7 +89,8 @@
    "fieldname": "workflow_state",
    "fieldtype": "Select",
    "label": "Workflow State",
-   "options": "Draft\nSubmitted\nApproved\nArchived"
+   "options": "Draft\nSubmitted\nApproved\nArchived",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_tild",
@@ -126,9 +127,13 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
- "links": [],
- "modified": "2026-03-23 00:54:32.125878",
+ "links": [
+  {
+   "link_doctype": "Individual Development Plan",
+   "link_fieldname": "succession_plan"
+  }
+ ],
+ "modified": "2026-03-23 12:24:28.466977",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Succession Plan",
@@ -145,7 +150,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
