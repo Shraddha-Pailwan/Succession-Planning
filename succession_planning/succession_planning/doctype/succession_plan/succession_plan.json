@@ -16,12 +16,15 @@
   "department",
   "plan_date",
   "reviewed_by",
+  "designation",
+  "branch",
   "workflow_state",
   "section_break_ymqg",
   "nominees",
   "section_break_tild",
   "committee_remarks",
-  "amended_from"
+  "section_break_npll",
+  "skills"
  ],
  "fields": [
   {
@@ -103,16 +106,6 @@
    "label": "Committee Remarks"
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Succession Plan",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
-  },
-  {
    "fieldname": "section_break_ymqg",
    "fieldtype": "Section Break",
    "label": "Nominees"
@@ -123,6 +116,31 @@
    "label": "Nominees",
    "options": "Succession Nominee",
    "reqd": 1
+  },
+  {
+   "fetch_from": "critical_role.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fetch_from": "critical_role.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "section_break_npll",
+   "fieldtype": "Section Break",
+   "label": "Skills"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Table",
+   "label": "Skills",
+   "options": "Designation Skill"
   }
  ],
  "grid_page_length": 50,
@@ -133,7 +151,7 @@
    "link_fieldname": "succession_plan"
   }
  ],
- "modified": "2026-03-23 12:24:28.466977",
+ "modified": "2026-03-23 17:36:25.949494",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Succession Plan",

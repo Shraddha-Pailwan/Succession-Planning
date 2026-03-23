@@ -87,28 +87,26 @@
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
+   "is_query_report": 1,
    "label": "Succession Risk Report",
    "link_count": 0,
    "link_to": "Succession Risk Report",
    "link_type": "Report",
    "onboard": 0,
-   "report_ref_doctype": "Succession Plan",
    "type": "Link"
   },
   {
    "hidden": 0,
-   "is_query_report": 0,
+   "is_query_report": 1,
    "label": "IDP Progress Report",
    "link_count": 0,
    "link_to": "IDP Progress Report",
    "link_type": "Report",
    "onboard": 0,
-   "report_ref_doctype": "Individual Development Plan",
    "type": "Link"
   }
  ],
- "modified": "2026-03-23 13:57:21.493875",
+ "modified": "2026-03-23 17:26:22.368778",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Succession Planning",

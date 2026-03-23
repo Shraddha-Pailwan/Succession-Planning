@@ -11,6 +11,7 @@
   "role_criticality",
   "incumbent_employee",
   "retirement_or_vacancy_date",
+  "branch",
   "regulatory_scope",
   "column_break_ubqj",
   "department",
@@ -18,6 +19,9 @@
   "last_reviewed_on",
   "job_profile",
   "status",
+  "designation",
+  "skills_section",
+  "skills",
   "competency_requirements_section",
   "competency_requirements"
  ],
@@ -105,6 +109,31 @@
    "fieldtype": "Link",
    "label": "Job Profile",
    "options": "Job Opening"
+  },
+  {
+   "fetch_from": "incumbent_employee.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "incumbent_employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "label": "Designation",
+   "options": "Designation"
+  },
+  {
+   "fieldname": "skills_section",
+   "fieldtype": "Section Break",
+   "label": "Skills"
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Table",
+   "label": "Skills",
+   "options": "Designation Skill"
   }
  ],
  "grid_page_length": 50,
@@ -115,7 +144,7 @@
    "link_fieldname": "critical_role"
   }
  ],
- "modified": "2026-03-23 12:11:51.129473",
+ "modified": "2026-03-23 17:02:41.998374",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Critical Role Register",

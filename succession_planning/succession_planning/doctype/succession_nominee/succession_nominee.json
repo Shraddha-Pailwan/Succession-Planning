@@ -36,18 +36,24 @@
    "fetch_from": "nominee_employee.employee_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Employee Name"
   },
   {
    "fetch_from": "nominee_employee.designation",
    "fieldname": "designation",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Designation",
    "options": "Designation"
   },
   {
    "fieldname": "readiness_level",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Readiness Level",
    "options": "Ready Now\n1 Year\n2+ Years",
    "reqd": 1
@@ -110,6 +116,8 @@
    "fetch_from": "nominee_employee.department",
    "fieldname": "department",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Department",
    "options": "Department"
   },
@@ -126,7 +134,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-03-23 11:20:13.190945",
+ "modified": "2026-03-23 17:20:44.510575",
  "modified_by": "Administrator",
  "module": "Succession Planning",
  "name": "Succession Nominee",
