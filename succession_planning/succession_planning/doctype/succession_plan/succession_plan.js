@@ -1,38 +1,27 @@
 frappe.ui.form.on('Succession Plan', {
     refresh: function(frm) {
-
         if (!frm.is_new()) {
-
             frm.add_custom_button('Create IDP', async () => {
-
                 if (!frm.doc.nominees || frm.doc.nominees.length === 0) {
                     frappe.msgprint("Please add nominees first");
                     return;
                 }
-
                 let role = frm.doc.critical_role;
-
                 if (!role) {
                     frappe.msgprint("Critical Role not set");
                     return;
                 }
-
-                // 🔥 Fetch employee names
                 let nominee_ids = frm.doc.nominees.map(n => n.nominee_employee);
-
                 let employees = await frappe.db.get_list('Employee', {
                     filters: { name: ['in', nominee_ids] },
                     fields: ['name', 'employee_name']
                 });
-
-                // 🔥 Create label → value mapping
                 let options_map = {};
                 let options = employees.map(emp => {
                     let label = `${emp.name} - ${emp.employee_name}`;
                     options_map[label] = emp.name;
                     return label;
                 });
-
                 frappe.prompt([
                     {
                         fieldname: 'employee',
@@ -42,10 +31,7 @@ frappe.ui.form.on('Succession Plan', {
                         reqd: 1
                     }
                 ], (values) => {
-
                     let selected_employee = options_map[values.employee];
-
-                    // 🔥 Check duplicate IDP
                     frappe.db.get_value(
                         'Individual Development Plan',
                         {
@@ -54,47 +40,27 @@ frappe.ui.form.on('Succession Plan', {
                         },
                         'name'
                     ).then(r => {
-
                         if (r.message && r.message.name) {
                             frappe.msgprint("IDP already exists for this employee");
                             return;
                         }
-
-                        // 🔥 Create IDP
                         frappe.new_doc('Individual Development Plan', {
                             employee: selected_employee,
                             target_role: role,
                             succession_plan: frm.doc.name
                         });
-
                     });
-
                 }, 'Create IDP', 'Create');
-
             });
-
         }
-
-    }
-});
-
-frappe.ui.form.on('Succession Plan', {
-
-    refresh: function(frm) {
-
         if (frm.doc.critical_role && (!frm.doc.skills || frm.doc.skills.length === 0)) {
             frm.trigger("critical_role");
         }
     },
 
     critical_role: function(frm) {
-
         if (!frm.doc.critical_role) return;
-
-        // 🔹 Clear existing skills
         frm.clear_table("skills");
-
-        // 🔹 Fetch Critical Role Register
         frappe.call({
             method: "frappe.client.get",
             args: {
@@ -102,17 +68,13 @@ frappe.ui.form.on('Succession Plan', {
                 name: frm.doc.critical_role
             },
             callback: function(r) {
-
                 if (r.message && r.message.skills) {
-
                     r.message.skills.forEach(function(row) {
 
                         let child = frm.add_child("skills");
-
                         child.skill = row.skill;
 
                     });
-
                     frm.refresh_field("skills");
                 }
             }

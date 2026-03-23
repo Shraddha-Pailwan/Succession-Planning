@@ -248,20 +248,16 @@ app_license = "mit"
 # ignore_translatable_strings_from = []
 
 fixtures = [
-
-    # ---------------- WORKSPACE ---------------- #
     {
         "dt": "Workspace",
         "filters": [["module", "=", "Succession Planning"]]
     },
 
-    # ---------------- REPORTS ---------------- #
     {
         "dt": "Report",
         "filters": [["module", "=", "Succession Planning"]]
     },
 
-    # ---------------- NUMBER CARDS ---------------- #
     {
         "dt": "Number Card",
         "filters": [
@@ -274,7 +270,6 @@ fixtures = [
         ]
     },
 
-    # ---------------- DASHBOARD CHARTS ---------------- #
     {
         "dt": "Dashboard Chart",
         "filters": [

@@ -1,15 +1,9 @@
 # Copyright (c) 2026, Quantbit Technologies and contributors
 # For license information, please see license.txt
 
-# Copyright (c) 2026, Quantbit Technologies and contributors
-# For license information, please see license.txt
-
 import frappe
 
 def execute(filters=None):
-
-    # ---------------- COLUMNS ---------------- #
-
     columns = [
         {
             "label": "Employee",
@@ -56,11 +50,7 @@ def execute(filters=None):
             "width": 130
         }
     ]
-
-    # ---------------- DATA ---------------- #
-
     data = []
-
     idps = frappe.get_all(
         "Individual Development Plan",
         fields=[
@@ -75,7 +65,6 @@ def execute(filters=None):
     )
 
     for idp in idps:
-
         data.append({
             "employee": idp.employee,
             "employee_name": idp.employee_name,
@@ -85,5 +74,4 @@ def execute(filters=None):
             "idp_period_start": idp.idp_period_start,
             "idp_period_end": idp.idp_period_end
         })
-
     return columns, data

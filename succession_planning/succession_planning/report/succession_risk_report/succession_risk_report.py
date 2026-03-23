@@ -4,9 +4,6 @@
 import frappe
 
 def execute(filters=None):
-
-    # ---------------- COLUMNS ---------------- #
-
     columns = [
         {
             "label": "Branch",
@@ -54,23 +51,14 @@ def execute(filters=None):
             "width": 150
         }
     ]
-
-    # ---------------- DATA ---------------- #
-
     data = []
-
-    # 🔥 Fetch with Branch
     succession_plans = frappe.get_all(
         "Succession Plan",
         fields=["name", "critical_role", "department", "bench_status", "branch"],
         order_by="branch asc"
     )
-
     current_branch = None
-
     for sp in succession_plans:
-
-        # ---------------- GROUP HEADER ---------------- #
         if current_branch != sp.branch:
             current_branch = sp.branch
 
@@ -79,32 +67,22 @@ def execute(filters=None):
                 "indent": 0,
                 "is_group": 1
             })
-
-        # ---------------- NOMINEES ---------------- #
-
         nominees = frappe.get_all(
             "Succession Nominee",
             filters={"parent": sp.name},
             fields=["readiness_level"]
         )
-
         total_nominees = len(nominees)
         ready_now = 0
-
         for n in nominees:
             if n.readiness_level == "Ready Now":
                 ready_now += 1
-
-        # ---------------- RISK LOGIC ---------------- #
-
         if sp.bench_status == "Critical Gap":
             risk_level = "High"
         elif sp.bench_status == "At Risk":
             risk_level = "Medium"
         else:
             risk_level = "Low"
-
-        # ---------------- CHILD ROW ---------------- #
 
         data.append({
             "branch": sp.branch,
@@ -116,5 +94,4 @@ def execute(filters=None):
             "ready_now": ready_now,
             "indent": 1
         })
-
     return columns, data

@@ -5,7 +5,6 @@ import frappe
 from frappe.model.document import Document
 from frappe.utils import nowdate
 
-
 class CriticalRoleRegister(Document):
 
     def validate(self):
@@ -29,6 +28,5 @@ class CriticalRoleRegister(Document):
                 self.incumbent_employee,
                 "department"
             )
-
             if emp_dept and emp_dept != self.department:
                 frappe.throw("Incumbent employee does not belong to selected department")
